@@ -9,6 +9,17 @@ You are the owner of a very successful hamburger restaurant.
 Your faithful customers line up every day and eat dozens of burgers. 
 You are writing a program to track exactly how many hamburgers each customer eats.
 
+Create a new C# Console Application. In the Main function, add a new variable of type Queue that contains items of type string.
+
+Create a variable for a Queue with items of type string
+This variable will represent your line of customers waiting outside.
+Create a variable for a Dictionary with keys of type string and values of type int.
+This variable will hold information about each customer
+Put 100 customers into the queue
+You can use the randomName function below to generate random people for your line
+Add a random number of burgers to the total for each customer. Make sure there is a key in the dictionary for each customer before you try incrementing their total!
+Print out each customer and their total burgers eaten.
+
 This program uses a random name and number generator. It stores the name in a queue and the name with the number in the dictionary. 
 It will then output the name with the number.
  */
