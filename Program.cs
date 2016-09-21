@@ -55,7 +55,7 @@ namespace Data_Structures_Basics_Assignment
         {
             //The queue is created along with the dicitionary and variables
             Queue<string> myQueue = new Queue<string>();
-            Dictionary<string, int> myD = new Dictionary<string, int>();
+            Dictionary<string, int> myDict = new Dictionary<string, int>();
             int iValue = 0;
 
             //While loop that will input the random names into the cue, it will do 100 customers
@@ -70,17 +70,18 @@ namespace Data_Structures_Basics_Assignment
             {
                 iValue = randomNumberInRange();
 
-                if (!myD.ContainsKey(keyWord))
-                    myD.Add(keyWord, iValue);
-
-                else myD[keyWord] += iValue;
-
+                if (!myDict.ContainsKey(keyWord))
+                {
+                    myDict.Add(keyWord, 0);
+                }
+                
+                    myDict[keyWord] += iValue;
  
             }
 
             //this for each loop will allow me to print the name with the number of burgers purchased with it. 
             //I had it print in white text with a red background for fun
-            foreach(KeyValuePair<string, int> CustBurg in myD)
+            foreach(KeyValuePair<string, int> CustBurg in myDict)
             {
                 Console.ForegroundColor = ConsoleColor.White;
                 Console.BackgroundColor = ConsoleColor.Red;
